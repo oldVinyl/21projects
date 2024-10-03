@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-do App</title>
+</head>
+<body>
+  <div id="cont">
+    <h1>TO-DO List</h1>
+    <div id="input">
+      <input type="text" placeholder="Add To-Do" id="newTD">
+      <button onclick="addTodo()">Add</button>
+    </div>
+    <div id="todos">
+      
+    </div>
+  </div>
+  <script>
+    const input = document.getElementById("newTD");
+    const todoList = document.getElementById("todos");
+
+    let todos = [];
+
+    function addTodo () {
+      if (input.value) {
+        todos.push(input.value);
+        renderTodo();
+      }
+    }
+
+    function renderTodo () {
+      let str = ``;
+      todos.forEach(t => {
+        str += `
+          <div class="todo">
+            <input type="checkbox">
+            <p>${t}</p>
+            <button onclick="removeTodo()">Delete</button>
+          </div>
+        `;
+        todoList.innerHTML = str;
+      })
+    }
+
+    function removeTodo () {
+      
+    }
+  </script>
+</body>
+</html>
