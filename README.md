@@ -1,5 +1,7 @@
-# 21projects
+# 21 projects
 21 beginner projects, i think....mostly JavaScript
+
+
 
 ## 1. To-do
 **Level:**
@@ -15,4 +17,15 @@
 - *CSS and styling
 - *There has to be a more efficient way to implement the delete button...but for now, im proud of my work :>
 
-__(help and/or advice is welcome)__
+## 1. Expenses Tracker
+**Level:**
+- Beginner (Easy, surprisingly)
+
+**Comments:**
+- Tried out html tables for the first time >;>
+- I expected to struggle (i didn't)
+- Got carried away with the css...but not too much!
+
+**Bugs to fix:**
+- Add array functionality to enable deleting items.
+- Rn, only big brain people will know that the random input field with the 1 is a quantity counter.

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expenses Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Expenses Tracker</h1>
+  <div id="input-field">
+    <input type="text" placeholder="Item Name" id="iname">
+    <input type="number" placeholder="Unit Cost" id="icost">
+    <input type="number" value="1" id="iqty" title="Quantity">
+    <button onclick="addItem(getItem())">Add</button>
+  </div>
+  <p id="status"></p>
+  <table>
+    <thead>
+      <th>Item</th>
+      <th>Unit Cost</th>
+      <th>Quantity</th>
+      <th>Cost</th>
+    </thead>
+    <tbody id="tbody"></tbody>
+    <tfoot id="tfoot">
+      <td colspan="3">TOTAL:</td>
+      <td id="grand-total">0</td>
+    </tfoot>
+  </table>
+  <div id="income">
+    <h2>Calculate your surplus/deficit.</h2>
+    <label for="inc" title="Salary Without Taxes">Disposable Income:</label>
+    <input name="inc" type="number" id="inc">
+    <button onclick="surDef()">Calculate</button>
+    <p id="net-val"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

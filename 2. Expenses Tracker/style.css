@@ -1,0 +1,112 @@
+body {
+  background-color: #ffe4c498;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+button {
+  background-color: #f9cf9a;
+  border-color: bisque;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+table, th, td {
+  border: 1px dotted black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+table {
+  width: clamp(60%, 60%, 100%);
+  margin-top: 1%;
+}
+
+tr {
+  transition: all ease 100ms;
+  height: 35px;
+}
+
+tr:hover {
+  background-color: #d6eeee;
+  cursor: default;
+}
+
+tfoot{
+  font-size: x-large;
+}
+
+::selection {
+  background-color: #eded7b;
+}
+
+#input-field {
+  margin-top: 1%;
+}
+#input-field input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1.2px solid black;
+}
+#input-field input:focus {
+  outline: none;
+}
+#icost {
+  width: 100px;
+}
+#iqty {
+  width: 50px;
+}
+
+#status, #net-val, #grand-total {
+  color: red;
+  font-weight: bolder;
+}
+#tfoot {
+  font-weight: bold;
+}
+
+#income {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  margin-top: 5.5%;
+}
+#income::before {
+  content: "";
+  position: absolute;
+  width: 120vw;
+  height: 1px;
+  top: 0;
+  background: linear-gradient(to right, transparent, #00000095, transparent);
+}
+#income h2 {
+  margin-top: 5%;
+}
+#income label {
+  font-size: larger;
+  cursor: pointer;
+}
+#income input {
+  max-width: 120px;
+  padding: 20px;
+  font-size: large;
+  font-weight: bold;
+  border: 1px solid black;
+  margin-top: 1%;
+  background-color: transparent;
+}
+#income button {
+  width: 120px;
+  margin: 0;
+  margin-top: 2%;
+}
+#net-val {
+  font-size: x-large;
+}
