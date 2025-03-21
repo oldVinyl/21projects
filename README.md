@@ -11,17 +11,18 @@ __(help and/or advice is welcome)__
 - To be honestly honest, i nearly gave up on something that is supposed to be easy when i realized that i didnt know how to implement the delete button. But i didnt. And inevitable, eventually, i figured it out!
 
 **Bugs to fix:**
-- Update list after add/delete without reloading everything bc it removes the checked properties
+- ~~Update list after add/delete without reloading everything bc it removes the checked properties~~
 - ~~When the array is empty, the last deleted element stays...why?~~
 - Unaligned display!
 - CSS and styling
 - ~~There has to be a more efficient way to implement the delete button...but for now, im proud of my work :>~~
-- __21/03/2025__ sync the checklist to rendertodo(), add it as a property??
 
 **Updates:**
-- __21/03/2025__ implemented the delete button :>
--                the input empties out after you click 'Add'
--                fixed the empty array discrepancy by force setting the arr to [] when todos.length === 0. Now displays a cute little 'Nothing to see here!' message when the array is empty :3
+__21/03/2025__ 
+- implemented the delete button :>
+- the input empties out after you click 'Add'
+- fixed the empty array discrepancy by force setting the arr to [] when todos.length === 0. Now displays a cute little 'Nothing to see here!' message when the array is empty :3
+- fixed the 'checked' property issue.
 
 ## 2. Expenses Tracker
 **Level:**

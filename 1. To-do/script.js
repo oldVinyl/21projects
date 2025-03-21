@@ -2,14 +2,9 @@ const input = document.getElementById("newTD");
 const todoList = document.getElementById("todos");
 
 
-//todo
-//todolist.value == 0 then say "Nothing to see here" --
-//empty input --
-//save to local storage
-//add checked property --
-
-
-let todos = [];
+let todos = JSON.parse(localStorage.getItem("TODOS")) || [];
+renderTodo();
+console.log("Memory: ", todos);
 
 document.body.addEventListener('keypress', e => {
   e == 'Enter' ? addTodo() : null;
@@ -28,7 +23,7 @@ function addTodo () {
 }
 
 function renderTodo () {
-  if (todos.length === 0) {
+  if (todos.length == 0) {
     todoList.innerHTML = "<div class='todo'>Nothing to see here!<div>";
   } else {
     let str = ``;
@@ -44,6 +39,7 @@ function renderTodo () {
       todoList.innerHTML = str;
     })
   }
+  localStorage.setItem("TODOS", JSON.stringify(todos));
 }
 
 function removeTodo (id) {
