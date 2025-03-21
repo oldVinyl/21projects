@@ -6,6 +6,7 @@ const todoList = document.getElementById("todos");
 //todolist.value == 0 then say "Nothing to see here"
 //empty input
 //save to local storage
+//add checked property
 
 
 let todos = [];

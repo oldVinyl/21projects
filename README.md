@@ -16,7 +16,7 @@ __(help and/or advice is welcome)__
 - Unaligned display!
 - CSS and styling
 - ~~There has to be a more efficient way to implement the delete button...but for now, im proud of my work :>~~
-- __21/03/2025__ sync the checklist to 
+- __21/03/2025__ sync the checklist to rendertodo(), add it as a property??
 
 **Updates:**
 - __21/03/2025__ implemented the delete button :>
