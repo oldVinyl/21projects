@@ -3,10 +3,10 @@ const todoList = document.getElementById("todos");
 
 
 //todo
-//todolist.value == 0 then say "Nothing to see here"
-//empty input
+//todolist.value == 0 then say "Nothing to see here" --
+//empty input --
 //save to local storage
-//add checked property
+//add checked property --
 
 
 let todos = [];
@@ -36,7 +36,7 @@ function renderTodo () {
     todos.forEach(t => {
       str += `
         <div class="todo">
-          <input type="checkbox">
+          <input type="checkbox" ${t.checked ? 'checked' : ''} onChange="toggleTodo('${t.id}')">
           <p>${t.name}</p>
           <button onclick="removeTodo('${t.id}')">Delete</button>
         </div>
@@ -52,5 +52,17 @@ function removeTodo (id) {
       return todo;
     }
   })
+  renderTodo();
+}
+
+function toggleTodo (id) {
+  todos = todos.map(todo => {
+    let checked = todo.checked;
+    if (todo.id === id) {
+      Object.defineProperty(todo, "checked", {value: !checked});
+      //return { ...todo, checked: !todo.checked };
+    }
+    return todo;
+  })        
   renderTodo();
 }
