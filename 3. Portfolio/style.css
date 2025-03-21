@@ -1,0 +1,125 @@
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  /* background-color: #7fffd4bd; */
+  background-color: #58f325;
+}
+
+body {
+  overflow-x: hidden;
+  /* background-color: beige; */
+  background-color: black;
+  position: relative;
+  margin: 5%;
+  font-size: 1.2rem;
+  color: #58f325;
+}
+
+h1 {
+  font-size: 10vw;
+}
+
+h2 {
+  font-size: 3vw;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100vw;
+  padding: 0.6% 5%;
+  height: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: bisque; */
+  background-color: #212121;
+}
+
+header nav {
+  max-width: 80%;
+  height: 100%;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+header ul, #coding ul {
+  list-style-type: none;
+}
+
+#title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title h1 + p {
+  display: inline;
+}
+
+.WASH {
+  color: #edf737;
+}
+.sparkle {
+  /* color: #006c6d; */
+  color: palevioletred;
+  font-weight: bolder;
+}
+
+#my-name {
+  color: blueviolet;
+  font-size: 1.6rem;
+}
+
+#about ol{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0.8vw;
+}
+
+#coding {
+  display: flex;
+  width: 95%;
+  justify-content: space-around;
+  gap: 10vw;
+  margin-left: 5%;
+  font-weight: bold;
+}
+
+.stack {
+  background-color: #006c6d;
+  color: #000000;
+  box-shadow: 4px 4px 12px #7b7b7b;
+  width: 100%;
+  border-radius: 15% 0;
+  padding: 2%;
+  transition: all ease 750ms;
+} .stack:hover {
+  transform: scale(1.05);
+  background-color: #01babd;
+  cursor: pointer;
+} .stack:active {
+  transform: scale(0.975);
+  opacity: 0.95;
+}
+
+.stack p {
+  font-size: 1.5rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -5%;
+}

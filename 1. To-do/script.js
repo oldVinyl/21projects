@@ -1,6 +1,13 @@
 const input = document.getElementById("newTD");
 const todoList = document.getElementById("todos");
 
+
+//todo
+//todolist.value == 0 then say "Nothing to see here"
+//empty input
+//save to local storage
+
+
 let todos = [];
 
 document.body.addEventListener('keypress', e => {
@@ -11,31 +18,38 @@ function addTodo () {
   if (input.value) {
     todos.push({
       name: input.value,
-      id: todos.length
+      id: crypto.randomUUID(),
+      checked: false
     });
     renderTodo();
+    input.value = "";
   }
 }
 
 function renderTodo () {
-  let str = ``;
-  todos.forEach(t => {
-    str += `
-      <div class="todo">
-        <input type="checkbox">
-        <p>${t.name}</p>
-        <button onclick="removeTodo('${t.name}', ${t.id})">Delete</button>
-      </div>
-    `;
-    todoList.innerHTML = str;
-  })
+  if (todos.length === 0) {
+    todoList.innerHTML = "<div class='todo'>Nothing to see here!<div>";
+  } else {
+    let str = ``;
+
+    todos.forEach(t => {
+      str += `
+        <div class="todo">
+          <input type="checkbox">
+          <p>${t.name}</p>
+          <button onclick="removeTodo('${t.id}')">Delete</button>
+        </div>
+      `;
+      todoList.innerHTML = str;
+    })
+  }
 }
 
-function removeTodo (n, del) {
-  for (let i = 0; i < todos.length; i++) {
-    if (todos[i].id == del && todos[i].name == n) {
-      todos.splice(i, 1);
-      renderTodo();
+function removeTodo (id) {
+  todos = todos.filter(todo => {
+    if (todo.id != id) {
+      return todo;
     }
-  }
+  })
+  renderTodo();
 }

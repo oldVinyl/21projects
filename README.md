@@ -12,10 +12,16 @@ __(help and/or advice is welcome)__
 
 **Bugs to fix:**
 - Update list after add/delete without reloading everything bc it removes the checked properties
-- When the array is empty, the last deleted element stays...why?
+- ~~When the array is empty, the last deleted element stays...why?~~
 - Unaligned display!
 - CSS and styling
-- There has to be a more efficient way to implement the delete button...but for now, im proud of my work :>
+- ~~There has to be a more efficient way to implement the delete button...but for now, im proud of my work :>~~
+- __21/03/2025__ sync the checklist to 
+
+**Updates:**
+- __21/03/2025__ implemented the delete button :>
+-                the input empties out after you click 'Add'
+-                fixed the empty array discrepancy by force setting the arr to [] when todos.length === 0. Now displays a cute little 'Nothing to see here!' message when the array is empty :3
 
 ## 2. Expenses Tracker
 **Level:**
@@ -29,3 +35,15 @@ __(help and/or advice is welcome)__
 **Bugs to fix:**
 - Add array functionality to enable deleting items.
 - Rn, only big brain people will know that the random input field with the 1 is a quantity counter.
+
+## 3. Portfolio
+**Level:**
+- Fun
+
+**Comments:**
+- Wanted to have fun with this one...much said...
+- took a lot of time to get this one out cuz i took more than a few business days to wallow in depression and self pity ;]
+- Played around with color a bi :3
+
+**Bugs to fix:**
+- 
