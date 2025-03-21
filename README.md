@@ -23,6 +23,7 @@ __21/03/2025__
 - the input empties out after you click 'Add'
 - fixed the empty array discrepancy by force setting the arr to [] when todos.length === 0. Now displays a cute little 'Nothing to see here!' message when the array is empty :3
 - fixed the 'checked' property issue.
+- added memory (local storage)
 
 ## 2. Expenses Tracker
 **Level:**
