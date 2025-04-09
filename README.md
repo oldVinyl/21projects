@@ -25,6 +25,9 @@ __21/03/2025__
 - fixed the 'checked' property issue.
 - added memory (local storage)
 
+__09/04/2025__
+- used JavaScript "createElement" to add todos rather than alter elem.innerHTML as a str which was reassigning a new string every time. Now, it doesn't do that!
+
 ## 2. Expenses Tracker
 **Level:**
 - Beginner (Easy, surprisingly)

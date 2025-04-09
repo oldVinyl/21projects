@@ -7,7 +7,7 @@ renderTodo();
 console.log("Memory: ", todos);
 
 document.body.addEventListener('keypress', e => {
-  e == 'Enter' ? addTodo() : null;
+  e.key == 'Enter' ? addTodo() : null;
 })
 
 function addTodo () {
@@ -23,42 +23,42 @@ function addTodo () {
 }
 
 function renderTodo () {
-  if (todos.length == 0) {
-    todoList.innerHTML = "<div class='todo'>Nothing to see here!<div>";
-  } else {
-    let str = ``;
+  todoList.innerHTML = ""; // clear previous todo elems
 
+  if (todos.length === 0) {
+    const msg = document.createElement('div');
+    msg.classList.add("todo");
+    msg.textContent = "Nothing to see here!";
+    todoList.appendChild(msg);
+  } else {
     todos.forEach(t => {
-      str += `
-        <div class="todo">
-          <input type="checkbox" ${t.checked ? 'checked' : ''} onChange="toggleTodo('${t.id}')">
-          <p>${t.name}</p>
-          <button onclick="removeTodo('${t.id}')">Delete</button>
-        </div>
-      `;
-      todoList.innerHTML = str;
+      const elem = document.createElement('div');
+      elem.classList.add("todo");
+      elem.innerHTML = `
+        <input type="checkbox" ${t.checked ? 'checked' : ''} onChange="toggleTodo('${t.id}')">
+        <p>${t.name}</p>
+        <button onclick="removeTodo('${t.id}')">Delete</button>
+      `;    
+      todoList.appendChild(elem);
     })
   }
   localStorage.setItem("TODOS", JSON.stringify(todos));
 }
 
 function removeTodo (id) {
-  todos = todos.filter(todo => {
-    if (todo.id != id) {
-      return todo;
-    }
-  })
+  todos = todos.filter(todo => todo.id !== id);
   renderTodo();
 }
 
-function toggleTodo (id) {
+function toggleTodo (id) {    
   todos = todos.map(todo => {
-    let checked = todo.checked;
     if (todo.id === id) {
-      Object.defineProperty(todo, "checked", {value: !checked});
-      //return { ...todo, checked: !todo.checked };
+      return {
+        ...todo,
+        checked: !todo.checked
+      };
     }
     return todo;
-  })        
+  });
   renderTodo();
 }
