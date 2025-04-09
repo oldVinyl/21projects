@@ -4,24 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To-do App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<style>
-  .todo {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-  } .todo input:checked + p {
-    text-decoration: line-through;
-  }.todo p {
-    padding: 5px 50px;
-  } .todo button {
-    height: fit-content;
-    width: fit-content;
-  }
-</style>
 <body>
   <div id="cont">
-    <h1>TO-DO List</h1>
+    <div id="h1-cont">
+      <h1>TO-DO List</h1>
+    </div>
     <div id="input">
       <input type="text" placeholder="Add To-Do" id="newTD">
       <button onclick="addTodo()">Add</button>

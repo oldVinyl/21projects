@@ -13,13 +13,16 @@ __(help and/or advice is welcome)__
 **Bugs to fix:**
 - ~~Update list after add/delete without reloading everything bc it removes the checked properties~~
 - ~~When the array is empty, the last deleted element stays...why?~~
-- Unaligned display!
-- CSS and styling
+- ~~Unaligned display!~~
+- ~~CSS and styling~~
 - ~~There has to be a more efficient way to implement the delete button...but for now, im proud of my work :>~~
+- perhaps change the bkg colour of checked todos?
+- add responsiveness for longer todo texts?
 
 **Updates:**
 __21/03/2025__ 
 - implemented the delete button :>
+- used crypto.randomUUID() to generate a random id
 - the input empties out after you click 'Add'
 - fixed the empty array discrepancy by force setting the arr to [] when todos.length === 0. Now displays a cute little 'Nothing to see here!' message when the array is empty :3
 - fixed the 'checked' property issue.
@@ -27,6 +30,8 @@ __21/03/2025__
 
 __09/04/2025__
 - used JavaScript "createElement" to add todos rather than alter elem.innerHTML as a str which was reassigning a new string every time. Now, it doesn't do that!
+- adding a proper style.css file
+- fixed alignment
 
 ## 2. Expenses Tracker
 **Level:**

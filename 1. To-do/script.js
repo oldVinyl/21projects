@@ -19,17 +19,20 @@ function addTodo () {
     });
     renderTodo();
     input.value = "";
+  } else {
+    alert("Empty Input Field!")
   }
 }
 
 function renderTodo () {
-  todoList.innerHTML = ""; // clear previous todo elems
+  todoList.innerHTML = "";
 
   if (todos.length === 0) {
     const msg = document.createElement('div');
     msg.classList.add("todo");
+    msg.classList.add("empty-td")
     msg.textContent = "Nothing to see here!";
-    todoList.appendChild(msg);
+    todoList.prepend(msg);
   } else {
     todos.forEach(t => {
       const elem = document.createElement('div');
@@ -39,7 +42,7 @@ function renderTodo () {
         <p>${t.name}</p>
         <button onclick="removeTodo('${t.id}')">Delete</button>
       `;    
-      todoList.appendChild(elem);
+      todoList.prepend(elem);
     })
   }
   localStorage.setItem("TODOS", JSON.stringify(todos));
@@ -61,4 +64,5 @@ function toggleTodo (id) {
     return todo;
   });
   renderTodo();
+
 }
