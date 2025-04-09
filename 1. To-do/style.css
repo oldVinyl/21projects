@@ -64,7 +64,7 @@ h1 {
 
 #newTD {
   box-shadow: inset 4px 2px 12px #ffffffcb;
-  width: 35vw;
+  width: 25vw;
 }
 
 .empty-td {
@@ -99,7 +99,8 @@ h1 {
 .todo {
   background-color: #e82a661d;
   border-radius: 16px;
-  width: clamp(25vw, 55vw, 65vw);
+  width: 40vw;
+  min-width: 250px;
   box-shadow: 2px 2px 2px #0000007a, inset 2px 2px 2px #ffffff40;
   cursor: pointer;
   padding: 15px;
