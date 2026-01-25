@@ -53,7 +53,15 @@ __09/04/2025__
 **Comments:**
 - Wanted to have fun with this one...much said...
 - took a lot of time to get this one out cuz i took more than a few business days to wallow in depression and self pity ;]
-- Played around with color a bi :3
+- Played around with color a bit :3
 
 **Bugs to fix:**
-- 
+- FINISH
+
+## 3. Calculator
+**Level:**
+- Super Easy. Figures, though, considering I've had months of improvement.
+
+**Comments**
+- A nice refresher
+- `eval` saves lives, even if it could potentially kill your pc

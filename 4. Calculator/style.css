@@ -1,0 +1,81 @@
+.numbers, .operations {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.numbers button, .plus, .minus, .multiply, .divide, .equals {
+    padding: 25px;
+    font-size: 1.2em;
+}
+
+.numbers button:hover, .plus:hover, .minus:hover, .multiply:hover, .divide:hover, .equals:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.numbers button:active, .plus:active, .minus:active, .multiply:active, .divide:active, .equals:active {
+    background-color: #bbb;
+}
+
+.numbers button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.operations button {
+    background-color: #e0e0e0;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+.equals {
+    background-color: rgba(0, 128, 0, 0.486) !important;
+    color: white;
+    border: none;
+}
+.equals:hover {
+    background-color: #0064007c !important;
+}
+
+.display {
+    width: 260px;
+    height: 50px;
+    margin: 20px auto;
+    padding: 25px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.5em;
+    text-align: right;
+    background-color: #f9f9f9;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.clear {
+    width: 300px;
+    font-style: italic;
+    text-align: right;
+    font-size: 1em;
+}
+
+.clear button {
+    cursor: pointer;
+    border: none;
+}
+
+.clear button:hover {
+    text-decoration: underline;
+}
